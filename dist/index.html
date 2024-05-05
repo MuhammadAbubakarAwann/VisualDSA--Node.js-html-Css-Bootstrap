@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Stack Operations</title>
+
+
+<script defer src="main.js"></script></head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center pt-3">
+            <div class="col-md-4" id="mainButtonsDiv">
+                <button id="stackBtn" class="btn btn-success" onclick="showSection('stackSection')">Stack</button>
+                <button id="arrayBtn" class="btn btn-info" onclick="showSection('arraySection')">Array</button>
+                <button id="objBtn" class="btn btn-warning" onclick="showSection('objSection')">Object</button>
+                <button id="linkedListBtn" class="btn btn-danger" onclick="showSection('linkedListSection')">Linked
+                    List</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section hide" id="stackSection">
+
+        <div id="stackDisp">
+            <div id="stackHeading">
+                <h1>Stack</h1>
+            </div>
+            <div class="col align-self-center" id="circleMain">
+            </div>
+        </div>
+        <div class="col justify-content-center pt-3" id="stackHandler">
+            <div class="col-md-2 ">
+                <input type="text" placeholder="Op to stack" class="form-control bg-dark text-white" id="stackInput"
+                    style="width: 200px;">
+            </div>
+            <div class="col-md-4">
+                <button id="createBtn" class="btn btn-success">Create</button>
+                <button id="pushBtn" class="btn btn-info">Push</button>
+                <button id="popBtn" class="btn btn-dark">Pop</button>
+                <button id="searchBtn" class="btn btn-primary">Search</button>
+                <button id="peekBtn" class="btn btn-warning">Peek</button>
+            </div>
+            <div id="output"></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="output">
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+
+    </div>
+    <div class="section hide" id="arraySection">
+        <div id="arrayDisp">
+            <div id="arrayHeading">
+                <h1>Array</h1>
+            </div>
+            <div class="col align-self-center" id="arrayBoxMain">
+
+            </div>
+        </div>
+        <div id="arrayHandlers">
+            <div>
+                <button id="insert_value_to_array_btn" class="btn btn-success">insert</button>
+                <label for="value">Value : </label>
+                <input type="number" name="inputValue_1" id="inputValue_1">
+                <button id="insert_go_btn" class="btn btn-success">go</button>
+                <p id="insertWarning" class="text-danger"></p>
+            </div>
+            <div>
+                <button id="insert_at_index_array_btn" class="btn btn-warning">insert at Specific index</button>
+                <label for="indexInput">Index : </label>
+                <input type="number" name="inputIndex" id="inputIndex">
+                <label for="value">Value : </label>
+                <input type="number" name="inputValue" id="inputValue">
+                <button id="insert_at_index_array_go_btn" class="btn btn-success">go</button>
+                <p id="insertAtIndexWarning" class="text-danger"></p>
+            </div>
+            <div>
+                <button id="removeArrayIndex" class="btn btn-info">remove(i)</button>
+                <label for="removeInput">Index : </label>
+                <input type="number" name="indexToRemove" id="indexToRemove">
+                <button id="removeArrayIndex_GO_Btn" class="btn btn-success">go</button>
+                <p id="indexToRemoveWarning" class="text-danger"></p>
+            </div>
+            <div>
+                <button id="replaceValueBtn" class="btn btn-primary">replace</button>
+                <label for="replaceValueIndex">Index : </label>
+                <input type="number" name="replaceValueIndex" id="replaceValueIndex">
+                <label for="newValue">Value : </label>
+                <input type="number" name="newValue" id="newValue">
+                <button id="replaceValueIndexGO" class="btn btn-success">go</button>
+                <p id="replaceWarning" class="text-danger"></p>
+            </div>
+
+            <div>
+                <button id="arraySelect" class="btn btn-dark">select</button>
+                <button id="arrayMax" class="btn btn-secondary">max</button>
+                <button id="arrayMin" class="btn btn-secondary">min</button>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="section hide" id="objSection">
+
+        <div class="mt-4 pb-5" id="objMain">
+
+        </div>
+        <div class="row justify-content-center pt-3" id="objHandler">
+            <div>
+                <button id="create_bus_obj_Btn" class="btn btn-success">Create Bus Object</button>
+            </div>
+            <div>
+                <label for="busColor">Bus color : </label>
+                <input type="text" name="busColor" id="busColor">
+                <button id="busColor_go_btn" class="btn btn-success">go</button>
+            </div>
+            <div>
+                <label for="busName">Bus Name : </label>
+                <input type="text" name="busName" id="busName">
+                <button id="busName_go_btn" class="btn btn-success">go</button>
+            </div>
+            <div>
+                <label for="busWindowColor">window color : </label>
+                <input type="text" name="busWindowColor" id="busWindowColor">
+
+                <label for="busWindowsQTY">No of window </label>
+                <input type="number" name="busWindowsQTY" id="busWindowsQTY">
+
+                <button id="busWindows_go_btn" class="btn btn-success">go</button>
+            </div>
+            <div>
+                <label for="busWheelsColor">wheel color : </label>
+                <input type="text" name="busWheelsColor" id="busWheelsColor">
+
+                <label for="busWheelsQTY">No of wheels: </label>
+                <input type="number" name="busWheelsQTY" id="busWheelsQTY">
+
+                <button id="buswheels_go_btn" class="btn btn-success">go</button>
+            </div>
+
+            <div>
+                <label for="busDoors">Color of Doors : </label>
+                <input type="text" name="busDoors" id="busDoors">
+                <button id="busDoors_go_btn" class="btn btn-success">go</button>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="section hide" id="linkedListSection">
+        <div id="listDisp">
+            <div class="center-content">
+                <h1>Single Linked List</h1>
+            </div>
+            <div class="row align-self-center" id="listBoxMain">
+            </div>
+        </div>
+        <div class="col justify-content-center pt-3" id="listHandler">
+            <div>
+                <button id="insert_value_to_LL_btn" class="btn btn-success">push</button>
+                <label for="value">Value : </label>
+                <input type="number" name="push_to_LL" id="push_to_LL">
+                <button id="LL_push_go_btn" class="btn btn-success">go</button>
+                <p id="LL_insertWarning" class="text-danger"></p>
+            </div>
+            <div>
+                <button id="insert_at_index_LL_btn" class="btn btn-warning">insert at Specific position</button>
+                <label for="indexInput">Index : </label>
+                <input type="number" name="insertAt_to_LL" id="insertAt_to_LL">
+                <label for="value">Value : </label>
+                <input type="number" name="insertAt_to_LL_val" id="insertAt_to_LL_val">
+                <button id="insertAt_to_LL_go_btn" class="btn btn-success">go</button>
+                <p id="LL_insertAtIndexWarning" class="text-danger"></p>
+            </div>
+            <div>
+                <button id="removeLLIndex" class="btn btn-info">remove(i)</button>
+                <label for="removeInput">Index : </label>
+                <input type="number" name="LL_indexToRemove" id="LL_indexToRemove">
+                <button id="LL_indexToRemove_go_btn" class="btn btn-success">go</button>
+                <p id="LL_indexToRemoveWarning" class="text-danger"></p>
+            </div>
+            <div>
+                <button id="getLLIndex" class="btn btn-info">get(i)</button>
+                <label for="getInput">Index : </label>
+                <input type="number" name="LL_indexToGet" id="LL_indexToGet">
+                <button id="LL_indexToGet_GO_Btn" class="btn btn-success">go</button>
+                <p id="LL_indexToRemoveWarning" class="text-danger"></p>
+            </div>
+
+            <div>
+                <button id="LL_Extras" class="btn btn-dark">Extras</button>
+                <button id="LL_getSize" class="btn btn-secondary">getSize</button>
+                <button id="LL_isEmpty" class="btn btn-secondary">isEmpty</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="outputDiv">
+        <div id="outputExplanation" class="hidden">
+
+        </div>
+        
+        <div id="outputCode" class="hidden">
+
+        </div>
+        <p id="output"></p>
+        <button id="explainationOfOutput" onclick="togglePanel('outputExplanation')">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+        <button id="codeForOutput" onclick="togglePanel('outputCode')">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.add('hide');
+            });
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.remove('hide');
+        }
+    </script>
+
+    <script src="dist/main.js"></script>
+    <script>
+        function togglePanel(panelId) {
+            var panel = document.getElementById(panelId);
+            panel.classList.toggle("hidden");
+
+            if (panel.classList.contains("hidden")) {
+                panel.style.left = "-250px";
+            } else {
+                panel.style.left = "0";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

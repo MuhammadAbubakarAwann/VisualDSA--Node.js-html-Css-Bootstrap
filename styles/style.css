@@ -1,0 +1,285 @@
+#circleMain {
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.circular-border {
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgb(195, 185, 3);
+    border-radius: 50%;
+}
+
+#mainButtonsDiv button {
+    width: 100px;
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.head-circle {
+    background-color: green;
+}
+
+#circleMain {
+    display: grid;
+    justify-content: center;
+}
+
+#arrayBoxMain {
+    display: flex;
+    margin-left: 360px;
+    margin-top: 30px;
+}
+
+#arraySection {
+    padding-top: 50px;
+
+}
+
+#arraySection div {
+    margin-top: 5px;
+}
+
+.bordered-box {
+    border: 2px solid rgb(255, 255, 255);
+    height: 50px;
+    width: 50px;
+}
+
+
+
+#objMain {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    /* Center child horizontally */
+    align-items: center;
+    /* Center child vertically */
+}
+
+
+
+#objMain {
+    border: 5px solid black;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#objHandler {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#busBody {
+    height: 250px;
+    width: 800px;
+    border: 5px solid black;
+    border-radius: 25px;
+    display: grid;
+
+    justify-content: center;
+
+}
+
+#wheelContainer {
+    height: 100px;
+    width: 800px;
+    margin-top: 80px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#wheel {
+    height: 100px;
+    width: 100px;
+    border: 5px solid black;
+    border-radius: 45px;
+}
+
+#windowContainer {
+    height: 80px;
+    width: 500px;
+    /* Match the width of the windows */
+    margin-top: 30px;
+    margin-left: 230px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#window {
+    height: 80px;
+    width: 80px;
+    /* Adjusted width to match the container */
+    opacity: 50%;
+}
+
+#door {
+    height: 140px;
+    width: 80px;
+    margin-top: -220px;
+    margin-left: 60px;
+
+}
+
+.hide {
+    display: none;
+}
+
+
+#listBoxMain {
+    display: flex;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+
+#linkedListSection {
+    padding-top: 50px;
+
+}
+
+.LL-bordered-box {
+    border: 3px solid rgb(255, 255, 255);
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+
+}
+
+.LL-bordered-box .partition {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#outputDiv {
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#explainationOfOutput {
+    background-color: rgb(14, 187, 235);
+    width: 10%;
+    height: 60px;
+    color: white;
+    margin-bottom: 2px;
+
+}
+
+#codeForOutput {
+    background-color: rgb(3, 36, 45);
+
+    width: 10%;
+    height: 200px;
+    color: white;
+}
+/* Define keyframes for sliding animation */
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#outputExplanation, #outputCode {
+    animation: slideFromRight 0.5s ease forwards;
+}
+
+/* Other styles for the elements */
+#outputExplanation {
+    width: 250px;
+    height: 60px;
+    position: absolute;
+    top: 16px;
+    margin-left: 95px;
+    background-color: rgb(14, 187, 235);
+    color: white;
+    z-index: -1;
+}
+
+#outputCode {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 76px;
+    margin-top: 2px;
+    margin-left: 95px;
+    background-color: rgb(3, 36, 45);   
+    color: white;
+    z-index: -1;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#arraySection {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#arrayDisp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 230px;
+
+}
+
+#arrayHeading {
+    margin-left: 330px;
+}
+
+#stackHandler {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#stackDisp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 230px;
+
+}
+
+#listHandler {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}

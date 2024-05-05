@@ -1,0 +1,8 @@
+function test(){
+        let stackArray = JSON.parse(localStorage.getItem('stack'));
+        if (stackArray) {
+            for (let val of stackArray) {
+                circle(val)
+            }
+        }
+    }
